@@ -1,0 +1,61 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is public. Leave out customer or organization names, work item titles or contents, and tokens. Blur screenshots if they show any of these.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, including any error message.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the Dashboard
+        2. Click …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: The version number from the installer you used, for example 0.3.3.
+      placeholder: 0.3.3
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+    validations:
+      required: true
+  - type: dropdown
+    id: signin
+    attributes:
+      label: How do you sign in to the organization?
+      options:
+        - Microsoft sign-in
+        - Personal access token
+        - Not relevant
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots (blurred where needed) or other details that help.
